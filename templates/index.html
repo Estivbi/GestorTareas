@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>App Gestor de Tareas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.6/dist/sketchy/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<body>
+<main class="container p-4">
+    <h1 class="display-4 text-center mt-4 titulo">APP de Gestión de Tareas</h1>
+    <div class="row">
+        <div class="col-md-4 offset-md-4 my-auto">
+            <div class="card">
+                <div class="card-header">
+                    <form action="/crear-tarea" method="post">
+                        <div class="form-group">
+                            <input type="text" name="contenido_tarea" placeholder="Tarea" class="form-control"
+                                   autofocus>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            Guardar
+                        </button>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        {% for tarea in lista_de_tareas %}
+                        <li>
+                            {{tarea.contenido}} <!-- contenido es la variable de la clase
+                            Tarea que almacena el texto de la tarea -->
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
