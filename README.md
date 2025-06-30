@@ -1,3 +1,5 @@
+![captura de la web](https://github.com/user-attachments/assets/31c9f218-9487-4f8d-96f2-f2795b93c710)
+
 # GestorTareas
 
 GestorTareas es una aplicación web sencilla para la gestión de tareas (to-do list), desarrollada con **Flask** y **Python**. Permite crear, marcar como hechas y eliminar tareas, almacenando la información en una base de datos SQLite.
